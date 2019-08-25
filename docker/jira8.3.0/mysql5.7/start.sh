@@ -1,0 +1,1 @@
+docker container run -d --name mysql5.7-for-jira8.3.0  --mount type=bind,source=/etc/localtime,target=/etc/localtime   --mount type=bind,source=$(pwd)/config/,target=/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=root --network dockernet mysql:5.7

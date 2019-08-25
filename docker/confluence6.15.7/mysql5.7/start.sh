@@ -1,0 +1,1 @@
+docker container run -d --name mysql5.7-for-confluence6.15.7 --mount type=bind,source=/etc/localtime,target=/etc/localtime --mount type=bind,source=$(pwd)/config/,target=/etc/mysql/conf.d --network dockernet -e MYSQL_ROOT_PASSWORD=root mysql:5.7

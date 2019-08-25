@@ -1,0 +1,2 @@
+sudo mkdir -p /docker/nginx/log/;
+docker container run -d --name nginx -p 80:80 -p 8888:8888 --mount type=bind,source=/github/ubuntu-tool/docker/nginx/nginx.conf,target=/etc/nginx/nginx.conf --mount type=bind,source=/github/ubuntu-tool/docker/nginx/conf.d/,target=/etc/nginx/conf.d/ --mount type=bind,source=/docker/nginx/log/,target=/var/log/nginx/ --mount type=bind,source=/github/ubuntu-tool/docker/nginx/web,target=/usr/share/nginx/html --network dockernet nginx

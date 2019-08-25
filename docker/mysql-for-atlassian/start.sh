@@ -1,0 +1,2 @@
+sudo mkdir -p /docker/mysql-for-atlassian/data;
+docker container run -d --name mysql-for-atlassian  --mount type=bind,source=/etc/localtime,target=/etc/localtime --mount type=bind,source=/github/ubuntu-tool/docker/mysql-for-atlassian/config/,target=/etc/mysql/conf.d --mount type=bind,source=/docker/mysql-for-atlassian/data,target=/var/lib/mysql --network dockernet -e MYSQL_ROOT_PASSWORD=root mysql:5.7
