@@ -1,1 +1,1 @@
-docker container run -d --name mysql5.7 -p 3307:3306 --mount type=bind,source=/etc/localtime,target=/etc/localtime   --mount type=bind,source=$(pwd)/config/,target=/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=jqwefjodsjojnkdsaflk21 --network dockernet mysql:5.7
+docker container run -d --name mysql5.7 -p 3307:3306 --mount type=bind,source=/etc/localtime,target=/etc/localtime   --mount type=bind,source=$(pwd)/config/,target=/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=jqwefjodsjojnkdsaflk21 mysql:5.7
